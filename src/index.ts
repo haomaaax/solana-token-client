@@ -207,9 +207,9 @@ async function main() {
     metaplex,
     new web3.PublicKey(MINT_ADDRESS),
     user,
-    "COOL", // Token name - REPLACE THIS WITH YOURS
-    "KOO",     // Token symbol - REPLACE THIS WITH YOURS
-    "Whoever holds this token is cool af" // Token description - REPLACE THIS WITH YOURS
+    "COOL", // Token name
+    "KOO",     // Token symbol
+    "Whoever holds this token is cool af" // Token description
   )
 
   const mint = await createNewMint(
@@ -233,7 +233,7 @@ async function main() {
     connection,
     user,
     mint,
-    new web3.PublicKey("BpnBxp5KvnupqYVutjYwyhmQi7wQrU5xZXXGRgZcKDSj")
+    new web3.PublicKey("4Ao1XPFTE7rnuyibnKqoNWQydFyXRub5sUUSYZFz4qPK")
   )
 
   await transferTokens(
