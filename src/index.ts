@@ -25,10 +25,10 @@ async function createTokenMetadata(
   description: string
 ) {
   // file to buffer
-  const buffer = fs.readFileSync("assets/pizza.png")
+  const buffer = fs.readFileSync("assets/cool.png")
 
   // buffer to metaplex file
-  const file = toMetaplexFile(buffer, "pizza.png")
+  const file = toMetaplexFile(buffer, "cool.png")
 
   // upload image and get image uri
   const imageUri = await metaplex.storage().upload(file)
