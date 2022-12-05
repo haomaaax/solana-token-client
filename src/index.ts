@@ -261,7 +261,15 @@ async function main() {
   console.log("PublicKey:", user.publicKey.toBase58())
 
   // Token Mint address
-  const MINT_ADDRESS = "G2mGu3Ten3j8ms5hAsT51zm9Hp9bs8dyAkxat4w9x6mm"
+  const MINT_ADDRESS = "GEu6AQFj4m7UQ1VrjaKWibcMioeLsX9Jd7FUqoRWpeKz"
+
+  const mint = await createNewMint(
+    connection,
+    user,
+    user.publicKey,
+    user.publicKey,
+    2
+  )
 
   // metaplex setup
   const metaplex = Metaplex.make(connection)
@@ -278,19 +286,12 @@ async function main() {
   await createTokenMetadata(
     connection,
     metaplex,
-    new web3.PublicKey(MINT_ADDRESS),
+    //new web3.PublicKey(MINT_ADDRESS),
+    mint,
     user,
     "COOL", // Token name
     "KOO",     // Token symbol
     "Whoever holds this token is cool af" // Token description
-  )
-
-  const mint = await createNewMint(
-    connection,
-    user,
-    user.publicKey,
-    user.publicKey,
-    2
   )
 
   const tokenAccount = await createTokenAccount(
