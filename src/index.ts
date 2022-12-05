@@ -263,6 +263,7 @@ async function main() {
   // Token Mint address
   const MINT_ADDRESS = "GEu6AQFj4m7UQ1VrjaKWibcMioeLsX9Jd7FUqoRWpeKz"
 
+  // move create new mint before create token metadata function to resolve mint authority issue
   const mint = await createNewMint(
     connection,
     user,
